@@ -9,14 +9,7 @@ function App() {
       <Header/>
       <main>
         <Items/>
-      <section id="examples">
-<h2>Exapmles</h2>
 <Tab/>
-      </section>
-        
-
-        
-
       </main>
     </div>
   );

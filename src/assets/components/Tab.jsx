@@ -2,6 +2,7 @@ import React from "react";
 import TabButton from "./tabButton";
 import { EXAMPLES } from "../../data-with-examples";
 import { useState } from "react";
+import Section from "./Section";
 function Tab(){
   
     let [selectedTopic, setSelectedTopic] = useState("");
@@ -24,31 +25,25 @@ function Tab(){
   </div>
     }
   return(
+<Section title="Examples" id="example">
     <menu>
-      
-   <TabButton 
-   color={selectedTopic==="components"}
-   onSelecet={()=>HandleClick("components")}>components</TabButton>
-   <TabButton 
-     color={selectedTopic==="jsx"}
-   onSelecet={()=>HandleClick("jsx")}>jsx</TabButton>
-  <TabButton 
-    color={selectedTopic==="props"}
-  onSelecet={()=>HandleClick("props")}> props</TabButton>
-  <TabButton 
-    color={selectedTopic==="state"}
-  onSelecet={()=>HandleClick("state")}>state</TabButton>
-
-<>
-<div>
-{tabContent}
-</div>
+      <TabButton 
+      color={selectedTopic==="components"}
+      onSelecet={()=>HandleClick("components")}>components</TabButton>
+      <TabButton 
+        color={selectedTopic==="jsx"}
+      onSelecet={()=>HandleClick("jsx")}>jsx</TabButton>
+     <TabButton 
+       color={selectedTopic==="props"}
+     onSelecet={()=>HandleClick("props")}> props</TabButton>
+     <TabButton 
+       color={selectedTopic==="state"}
+     onSelecet={()=>HandleClick("state")}>state</TabButton>
+   </menu>
+   {tabContent}
+   </Section>
+  );
   
-  </>
-
-</menu>
- 
-  )
   
 }
 
