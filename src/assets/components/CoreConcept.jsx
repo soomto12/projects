@@ -1,7 +1,8 @@
 import React from 'react';
 import CORE_CONCEPTS from "../../data";
 import Concepts from "./concept";
-function Concets(){
+
+function Items(){
     return(
         < section id="core-concepts">
         <h2>core conceps</h2>
@@ -13,4 +14,4 @@ function Concets(){
         </section>
     )
 }
-export default Concets;
+export default Items;
