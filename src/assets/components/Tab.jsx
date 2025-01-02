@@ -3,6 +3,7 @@ import TabButton from "./tabButton";
 import { EXAMPLES } from "../../data-with-examples";
 import { useState } from "react";
 import Section from "./Section";
+import Button from "./button";
 function Tab(){
   
     let [selectedTopic, setSelectedTopic] = useState("");
@@ -25,22 +26,31 @@ function Tab(){
   </div>
     }
   return(
-<Section title="Examples" id="example">
-    <menu>
-      <TabButton 
+<Section id="examples" title="Examples">
+
+    
+      <Button buttons={
+        <>
+        <TabButton 
       color={selectedTopic==="components"}
-      onSelecet={()=>HandleClick("components")}>components</TabButton>
+      onClick={()=>HandleClick("components")}>components</TabButton>
       <TabButton 
         color={selectedTopic==="jsx"}
-      onSelecet={()=>HandleClick("jsx")}>jsx</TabButton>
+      onClick={()=>HandleClick("jsx")}>jsx</TabButton>
      <TabButton 
        color={selectedTopic==="props"}
-     onSelecet={()=>HandleClick("props")}> props</TabButton>
+     onClick={()=>HandleClick("props")}> props</TabButton>
      <TabButton 
        color={selectedTopic==="state"}
-     onSelecet={()=>HandleClick("state")}>state</TabButton>
-   </menu>
-   {tabContent}
+     onClick={()=>HandleClick("state")}>state</TabButton>
+        </> 
+      }>
+
+{tabContent}
+      </Button>
+      
+   
+   
    </Section>
   );
   
